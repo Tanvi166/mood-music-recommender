@@ -152,43 +152,27 @@ st.markdown(
 
 
 # -----------------------------
-# In-code song dataset
+# CSV song dataset
 # -----------------------------
 @st.cache_data
 def load_song_data():
-    songs = [
-        {"song_name": "Sunshine Drive", "artist": "Luna Ray", "mood": "Happy", "energy_level": "High", "genre": "Pop"},
-        {"song_name": "Weekend Glow", "artist": "The Neon Club", "mood": "Happy", "energy_level": "Medium", "genre": "Pop"},
-        {"song_name": "Smile Again", "artist": "Mira Stone", "mood": "Happy", "energy_level": "Low", "genre": "Lo-fi"},
-        {"song_name": "Bright City", "artist": "Nova Beats", "mood": "Happy", "energy_level": "High", "genre": "EDM"},
-        {"song_name": "Good Day Anthem", "artist": "Skyline Crew", "mood": "Happy", "energy_level": "High", "genre": "Hip-Hop"},
-        {"song_name": "Rain on Glass", "artist": "Evan Blue", "mood": "Sad", "energy_level": "Low", "genre": "Lo-fi"},
-        {"song_name": "Empty Platform", "artist": "Noah Vale", "mood": "Sad", "energy_level": "Low", "genre": "Pop"},
-        {"song_name": "Fading Letters", "artist": "Iris Lane", "mood": "Sad", "energy_level": "Medium", "genre": "Rock"},
-        {"song_name": "Midnight Apology", "artist": "Velvet Echo", "mood": "Sad", "energy_level": "Medium", "genre": "Hip-Hop"},
-        {"song_name": "Blue Window", "artist": "Soft Static", "mood": "Sad", "energy_level": "Low", "genre": "Lo-fi"},
-        {"song_name": "Ocean Breathing", "artist": "Ari Bloom", "mood": "Calm", "energy_level": "Low", "genre": "Lo-fi"},
-        {"song_name": "Quiet Stars", "artist": "Mellow Atlas", "mood": "Calm", "energy_level": "Low", "genre": "Pop"},
-        {"song_name": "Tea and Moonlight", "artist": "Nia Fern", "mood": "Calm", "energy_level": "Medium", "genre": "Lo-fi"},
-        {"song_name": "Gentle Waves", "artist": "Cloud Harbor", "mood": "Calm", "energy_level": "Low", "genre": "EDM"},
-        {"song_name": "Slow Horizon", "artist": "Paper North", "mood": "Calm", "energy_level": "Medium", "genre": "Rock"},
-        {"song_name": "Thunder Pulse", "artist": "Axel Riot", "mood": "Energetic", "energy_level": "High", "genre": "Rock"},
-        {"song_name": "Bass Launch", "artist": "DJ Orbit", "mood": "Energetic", "energy_level": "High", "genre": "EDM"},
-        {"song_name": "Run the Night", "artist": "Metro Kings", "mood": "Energetic", "energy_level": "High", "genre": "Hip-Hop"},
-        {"song_name": "Electric Feet", "artist": "Zara Volt", "mood": "Energetic", "energy_level": "Medium", "genre": "Pop"},
-        {"song_name": "Fireline", "artist": "The Voltage", "mood": "Energetic", "energy_level": "High", "genre": "Rock"},
-        {"song_name": "Rose Lights", "artist": "Sia Moon", "mood": "Romantic", "energy_level": "Medium", "genre": "Pop"},
-        {"song_name": "Hold You Close", "artist": "Arman Grey", "mood": "Romantic", "energy_level": "Low", "genre": "Lo-fi"},
-        {"song_name": "Velvet Promise", "artist": "June Valley", "mood": "Romantic", "energy_level": "Medium", "genre": "Rock"},
-        {"song_name": "Late Night Text", "artist": "Kairo Muse", "mood": "Romantic", "energy_level": "Medium", "genre": "Hip-Hop"},
-        {"song_name": "Dancing Hearts", "artist": "Elena Vox", "mood": "Romantic", "energy_level": "High", "genre": "EDM"},
-        {"song_name": "Golden Hour Call", "artist": "Maya Sol", "mood": "Romantic", "energy_level": "Low", "genre": "Pop"},
-        {"song_name": "Afterparty Bloom", "artist": "Pulse Avenue", "mood": "Happy", "energy_level": "Medium", "genre": "EDM"},
-        {"song_name": "Study Lantern", "artist": "Lo Cloud", "mood": "Calm", "energy_level": "Medium", "genre": "Hip-Hop"},
-        {"song_name": "Breakout", "artist": "Crimson Field", "mood": "Energetic", "energy_level": "Medium", "genre": "Rock"},
-        {"song_name": "Soft Goodbye", "artist": "Amelia Coast", "mood": "Sad", "energy_level": "Medium", "genre": "Pop"},
-    ]
-    return pd.DataFrame(songs)
+    songs_df = pd.read_csv("songs.csv")
+
+    # Normalize CSV column names to the names used by the recommendation UI.
+    songs_df = songs_df.rename(
+        columns={
+            "song": "song_name",
+            "energy": "energy_level",
+        }
+    )
+
+    required_columns = {"song_name", "artist", "mood", "energy_level", "genre"}
+    missing_columns = required_columns.difference(songs_df.columns)
+    if missing_columns:
+        st.error(f"songs.csv is missing required columns: {', '.join(sorted(missing_columns))}")
+        st.stop()
+
+    return songs_df
 
 
 # -----------------------------
@@ -214,13 +198,15 @@ def train_model(song_df):
 
 
 def encode_user_input(mood, energy_level, genre, encoders):
-    return np.array(
+    return pd.DataFrame(
         [
-            encoders["mood"].transform([mood])[0],
-            encoders["energy_level"].transform([energy_level])[0],
-            encoders["genre"].transform([genre])[0],
+            {
+                "mood_encoded": encoders["mood"].transform([mood])[0],
+                "energy_level_encoded": encoders["energy_level"].transform([energy_level])[0],
+                "genre_encoded": encoders["genre"].transform([genre])[0],
+            }
         ]
-    ).reshape(1, -1)
+    )
 
 
 def recommend_songs(mood, energy_level, genre, model_df, encoders, scaler, kmeans, top_n=5):
@@ -458,7 +444,7 @@ with right_col:
     fig.update_traces(marker=dict(line=dict(width=1, color="rgba(255,255,255,0.55)")))
     st.plotly_chart(fig, use_container_width=True)
 
-with st.expander("📚 View Complete In-Code Song Dataset"):
+with st.expander("📚 View Complete Song Dataset"):
     st.dataframe(
         songs_df,
         use_container_width=True,
