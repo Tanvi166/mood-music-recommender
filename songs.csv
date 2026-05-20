@@ -1,26 +1,106 @@
+
 song,artist,mood,energy,genre
-Blinding Lights,The Weeknd,Happy,High,Pop
-Levitating,Dua Lipa,Happy,High,Pop
+Kesariya,Arijit Singh,Romantic,Medium,Pop
+Heeriye,Arijit Singh,Romantic,Low,Pop
+Apna Bana Le,Arijit Singh,Romantic,Low,Lo-fi
+Tum Hi Ho,Arijit Singh,Sad,Low,Pop
+Satranga,Arijit Singh,Sad,Low,Lo-fi
+Shayad,Arijit Singh,Romantic,Low,Lo-fi
+Raabta,Arijit Singh,Romantic,Medium,Pop
+Ilahi,Arijit Singh,Happy,Medium,Pop
+Phir Le Aya Dil,Arijit Singh,Sad,Low,Lo-fi
+Channa Mereya,Arijit Singh,Sad,Low,Pop
+Husn,Anuv Jain,Calm,Low,Lo-fi
+Jo Tum Mere Ho,Anuv Jain,Romantic,Low,Lo-fi
+Baarishein,Anuv Jain,Sad,Low,Lo-fi
+Alag Aasmaan,Anuv Jain,Calm,Low,Lo-fi
+Gul,Anuv Jain,Romantic,Low,Lo-fi
+Chaand Baaliyan,Aditya A,Calm,Low,Lo-fi
+Until I Found You,Stephen Sanchez,Romantic,Low,Pop
 Perfect,Ed Sheeran,Romantic,Low,Pop
-Someone Like You,Adele,Sad,Low,Pop
-Believer,Imagine Dragons,Energetic,High,Rock
-Thunder,Imagine Dragons,Energetic,High,Rock
-Lovely,Billie Eilish,Sad,Low,Lo-fi
-Stay,Justin Bieber,Happy,Medium,Pop
-Faded,Alan Walker,Calm,Medium,EDM
-Closer,Chainsmokers,Romantic,Medium,EDM
-Happier,Marshmello,Sad,Medium,EDM
-Counting Stars,OneRepublic,Happy,High,Rock
-Senorita,Shawn Mendes,Romantic,Medium,Pop
-Night Changes,One Direction,Calm,Low,Pop
-Heat Waves,Glass Animals,Calm,Medium,Lo-fi
+Photograph,Ed Sheeran,Romantic,Low,Pop
+Shape of You,Ed Sheeran,Happy,Medium,Pop
+Thinking Out Loud,Ed Sheeran,Romantic,Low,Pop
+Levitating,Dua Lipa,Happy,High,Pop
+Dance The Night,Dua Lipa,Happy,High,Pop
+Blinding Lights,The Weeknd,Energetic,High,Pop
 Starboy,The Weeknd,Energetic,High,Hip-Hop
-Lucid Dreams,Juice WRLD,Sad,Low,Hip-Hop
-Gods Plan,Drake,Calm,Medium,Hip-Hop
-Shape of You,Ed Sheeran,Romantic,Medium,Pop
+Save Your Tears,The Weeknd,Sad,Medium,Pop
+Die For You,The Weeknd,Romantic,Medium,Pop
+Heat Waves,Glass Animals,Calm,Medium,Lo-fi
+Lovely,Billie Eilish,Sad,Low,Lo-fi
 Bad Guy,Billie Eilish,Energetic,Medium,Pop
+Ocean Eyes,Billie Eilish,Calm,Low,Lo-fi
+Believer,Imagine Dragons,Energetic,High,Rock
+Bones,Imagine Dragons,Energetic,High,Rock
+Thunder,Imagine Dragons,Energetic,High,Rock
+Demons,Imagine Dragons,Sad,Medium,Rock
+Faded,Alan Walker,Sad,Medium,EDM
+Alone,Alan Walker,Calm,Medium,EDM
 On My Way,Alan Walker,Happy,High,EDM
-Rockstar,Post Malone,Energetic,High,Hip-Hop
-Perfect Strangers,Jonas Blue,Calm,Medium,EDM
-Memories,Maroon 5,Sad,Low,Pop
+Closer,Chainsmokers,Romantic,Medium,EDM
+Something Just Like This,Chainsmokers,Happy,High,EDM
+Night Changes,One Direction,Calm,Low,Pop
+Story Of My Life,One Direction,Sad,Medium,Pop
+What Makes You Beautiful,One Direction,Happy,High,Pop
+Stay,Justin Bieber,Happy,Medium,Pop
+Love Yourself,Justin Bieber,Calm,Low,Pop
+Peaches,Justin Bieber,Happy,Medium,Pop
+Baby,Justin Bieber,Happy,High,Pop
+Excuses,AP Dhillon,Calm,Medium,Hip-Hop
+Brown Munde,AP Dhillon,Energetic,High,Hip-Hop
+Insane,AP Dhillon,Energetic,Medium,Hip-Hop
+Summer High,AP Dhillon,Happy,Medium,Pop
+Desires,AP Dhillon,Romantic,Medium,Hip-Hop
+With You,AP Dhillon,Romantic,Medium,Pop
+True Stories,AP Dhillon,Sad,Medium,Hip-Hop
+Pasoori,Ali Sethi,Calm,Medium,Pop
+Obsessed,Riar Saab,Energetic,High,Hip-Hop
+Tu Aake Dekhle,King,Romantic,Medium,Hip-Hop
+Maan Meri Jaan,King,Romantic,Medium,Pop
+OOPS,King,Energetic,High,Hip-Hop
+Still Rollin,Shubh,Energetic,High,Hip-Hop
+Cheques,Shubh,Energetic,Medium,Hip-Hop
+We Rollin,Shubh,Energetic,High,Hip-Hop
+No Love,Shubh,Sad,Medium,Hip-Hop
+Softly,Karan Aujla,Romantic,Medium,Pop
+Players,Badshah,Energetic,High,Hip-Hop
+Mercy,Badshah,Energetic,High,Hip-Hop
+Jugnu,Badshah,Happy,High,Pop
+Blue Eyes,Yo Yo Honey Singh,Happy,High,Pop
+Desi Kalakaar,Yo Yo Honey Singh,Energetic,High,Hip-Hop
+Brown Rang,Yo Yo Honey Singh,Happy,High,Pop
+Love Dose,Yo Yo Honey Singh,Romantic,Medium,Pop
+Calm Down,Rema,Calm,Medium,Pop
+People,Libianca,Sad,Low,Lo-fi
+Unholy,Sam Smith,Energetic,Medium,Pop
+Senorita,Shawn Mendes,Romantic,Medium,Pop
+Treat You Better,Shawn Mendes,Romantic,Medium,Pop
+Happier,Olivia Rodrigo,Sad,Low,Pop
+Drivers License,Olivia Rodrigo,Sad,Low,Lo-fi
+Good 4 U,Olivia Rodrigo,Energetic,High,Rock
+Let Me Down Slowly,Alec Benjamin,Sad,Low,Lo-fi
+Mockingbird,Eminem,Sad,Medium,Hip-Hop
+Lose Yourself,Eminem,Energetic,High,Hip-Hop
+Without Me,Eminem,Energetic,High,Hip-Hop
+Gods Plan,Drake,Calm,Medium,Hip-Hop
+One Dance,Drake,Happy,Medium,Pop
+Fair Trade,Drake,Calm,Medium,Hip-Hop
 Sunflower,Post Malone,Happy,Medium,Hip-Hop
+Circles,Post Malone,Calm,Medium,Pop
+Rockstar,Post Malone,Energetic,High,Hip-Hop
+Attention,Charlie Puth,Romantic,Medium,Pop
+See You Again,Charlie Puth,Sad,Low,Pop
+Light Switch,Charlie Puth,Happy,High,Pop
+As It Was,Harry Styles,Calm,Medium,Pop
+Watermelon Sugar,Harry Styles,Happy,High,Pop
+Adore You,Harry Styles,Romantic,Medium,Pop
+Stereo Hearts,Gym Class Heroes,Happy,High,Pop
+Counting Stars,OneRepublic,Happy,High,Rock
+Apologize,OneRepublic,Sad,Low,Pop
+Someone You Loved,Lewis Capaldi,Sad,Low,Lo-fi
+Arcade,Duncan Laurence,Sad,Low,Lo-fi
+Memories,Maroon 5,Sad,Low,Pop
+Sugar,Maroon 5,Happy,High,Pop
+Animals,Maroon 5,Energetic,High,Rock
+Girls Like You,Maroon 5,Romantic,Medium,Pop
